@@ -1,0 +1,27 @@
+# C++
+## vector 几种初始化
+
+```c++
+vector<int> ilist1、vector<int> ilist2  = ilist; 
+vector<int> ilist2(ilist)、vector<int> ilist4(7)、vector<int> ilist5(7,3);
+vector<int> ilist = {xxx}
+vector<int> ilist3(ilist.begin()+2,ilist.end()-1);
+```
+
+## 虚表指针和虚表
+
+每个同类对象中都有个一个`vptr`，指向内存中的vtable，所有同类对象，共享一个vtable
+
+虚表指针是对象的`第一个数据成员`，也就是说对象的首地址就是虚表指针的首地址
+
+虚表（虚表存储在数据段）的地址存放在<u>对象的起始位置</u>，即对象的第一个数据成员就是它的虚表指针，同时注意到，虚表指针的初始化发生在构造函数过程中
+
+[参考博客](https://www.cnblogs.com/lsh123/p/7429475.html)
+
+
+
+## C++中基类的析构函数为什么要用virtual虚析构函数
+
+> 假设基类中采用的是非虚析构函数，当删除基类指针指向的派生类对象时就不会触发动态绑定，因而只会调用基类的析构函数，而不会调用派生类的析构函数。那么在这种情况下，派生类中申请的空间就得不到释放从而产生内存泄漏。所以，为了`防止内存泄漏`的发生，C++中基类的析构函数应采用virtual虚析构函数。
+
+[参考博客](https://blog.csdn.net/yhc166188/article/details/81587442)
