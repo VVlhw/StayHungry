@@ -1,3 +1,5 @@
 - [VVlhw 学 【Vue】](【Vue】/_sidebar.md)
 - [VVlhw 学 【算法】](【LeetCode】/_sidebar.md)
 - [VVlhw 学 【C++】](【C++】/_sidebar.md)
+- [VVlhw 学 【设计者模式】](【设计者模式】/_sidebar.md)
+- [【开发工具】](【开发工具】/_sidebar.md)
