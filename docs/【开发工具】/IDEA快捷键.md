@@ -9,3 +9,7 @@
 ## 格式化代码`ctrl+alt+L`
 
 ## 查看一个类的方法`Alt+7`
+
+## 生成try/catch `ctrl+alt+t`     
+## 创建测试类`ctrl+shift+t` 
+
