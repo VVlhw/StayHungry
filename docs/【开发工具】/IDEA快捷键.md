@@ -13,3 +13,5 @@
 ## 生成try/catch `ctrl+alt+t`     
 ## 创建测试类`ctrl+shift+t` 
 
+## 生成类图，选中再`ctrl+alt+u`
+

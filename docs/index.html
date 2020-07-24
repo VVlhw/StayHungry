@@ -13,12 +13,11 @@
 
 <body>
   <nav>
-    <a href="https://vvlhw.com/">个人博客</a>
+    <a href="https://vvlhw.com/">梁汉伟个人博客</a>
   </nav>
   <div id="app"></div>
   <script>
     window.$docsify = {
-      name: '',
       repo: '',
       coverpage: true,
       loadSidebar: true,
@@ -28,10 +27,20 @@
       name: '梁汉伟的技术博客',
       // 本地时
       // nameLink: '/#/README',
+      //auto2top: true, //切换页面后是否自动跳转到页面顶部
       // 提交github时
-      nameLink: '/StayHungry/#/',
+      nameLink: '/StayHungry/#/README',
 
-      search: 'auto', // 默认值
+      // search: 'auto', // 默认值
+      //全文搜索
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        // 搜索标题的最大程级, 1 - 6
+        depth: 3,
+      },
       count: {
         countable: true,
         fontsize: '0.9em',
@@ -42,7 +51,9 @@
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <!-- 搜索 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script> -->
+  <!--全文搜索,直接用官方提供的无法生效-->
+  <script src="https://cdn.bootcss.com/docsify/4.5.9/plugins/search.min.js"></script>
   <!-- 图片放大 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
   <!-- 代码copy -->
@@ -52,6 +63,8 @@
   <!-- 语言高亮，参考https://github.com/PrismJS/prism/tree/gh-pages/components -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+
 </body>
 
 </html>
